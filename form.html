@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>🎓 Student Registration</h2>
+
+    <form onsubmit="return validateForm()">
+
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label>Email</label>
+        <input type="text" id="email" placeholder="Enter your email">
+
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Minimum 6 characters">
+
+        <label>Mobile Number</label>
+        <input type="text" id="mobile" placeholder="10-digit mobile number">
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <!-- Latest submission -->
+    <div id="result" class="result-box">
+        <h3>✨ Latest Submission</h3>
+        <p><strong>Name:</strong> <span id="rName"></span></p>
+        <p><strong>Email:</strong> <span id="rEmail"></span></p>
+        <p><strong>Mobile:</strong> <span id="rMobile"></span></p>
+    </div>
+</div>
+
+</body>
+
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #d39b66, #5bb483);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 380px;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #5a4fcf;
+}
+
+label {
+    font-size: 14px;
+    margin-top: 12px;
+    display: block;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #66e1ea;
+    box-shadow: 0 0 5px rgba(87, 134, 143, 0.5);
+}
+
+button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 13px;
+    border: none;
+    background: linear-gradient(135deg, #8489a3, #af8bd3);
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.result-box {
+    display: none;
+    margin-top: 25px;
+    padding: 18px;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    border-left: 5px solid #667eea;
+    border-radius: 10px;
+}
+
+.result-box h3 {
+    margin-top: 0;
+    color: #5a4fcf;
+}
+</style>
+
+</html>
